@@ -12,7 +12,6 @@ Question_t *create_new_question(char *quesiton, int correct_answer, char *a1, ch
 
     q->correct_answer = correct_answer;
 
-    // Allokeringen och kopieringen borde ske i en hjälpfunktion.
     q->question = malloc(sizeof(char) * (strlen(quesiton) + 1));
     strcpy(q->question, quesiton);
 
