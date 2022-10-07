@@ -19,14 +19,12 @@ int destroy_question_list(Question_list_t *question_list)
             destroy_question(question_list->questions[i]);
         }
         free(question_list);
-        question_list = NULL;
         return 1;
     }
 }
 
 void question_list_add(Question_list_t *question_list, Question_t *new_question)
 {
-    
     int index = question_list->lenght;
     question_list->questions[index] = new_question;
     question_list->lenght++;

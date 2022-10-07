@@ -43,7 +43,6 @@ int destroy_question(Question_t *question)
         free(question->alternative_3);
         free(question->alternative_4);
         free(question);
-        question = NULL;
         return 1;
     }
 }
@@ -90,22 +89,6 @@ int read_answer(int lo, int hi)
     } while(num < lo || num > hi);
 
     return num;
-}
-
-
-/*
-    hjälpfunktion som allokerar så mycket minne som behövs 
-    för att kopiera en sträng(source) till en annan(dest) och sedan kopierar
-    in den.
-*/
-void str_allocate_copy(char *dest, char *source)
-{
-    int len = strlen(source) + 1;       //strlen inkluderar inte null. +1 för att inkludera nullterminering.
-    dest = malloc(sizeof(char) * len);       
-    strcpy(dest, source);               //strcpy inkluderar nullterminering.
-    dest[0] = 'a';
-
-
 }
 
 

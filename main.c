@@ -44,7 +44,7 @@ void print_instructions(void)
     printf("================================================\n\n");
     printf("Tryck Enter för att fortsätta...");
 
-    scanf("d");             //Dålig lösning?
+    scanf("d");
     fflush(stdin);          
 
     printf("\n");
